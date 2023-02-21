@@ -32,8 +32,13 @@ body header > div:first-child {
 #content {
   border: #ffde7a 2px dashed;
   width: auto;
-  padding: 20px;
+  padding: 10px;
   margin: 0 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 @media screen and (min-width: 768px) {

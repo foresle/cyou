@@ -1,0 +1,28 @@
+.universe_card {
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  border: #ffde7a 2px solid;
+}
+.universe_card > img {
+  width: 100%;
+}
+.universe_card > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.universe_card > div:nth-child(2) div:first-child {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .universe_card {
+    width: 280px;
+  }
+}
+
+/*# sourceMappingURL=card.css.map */

@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     # Local apps
     'accounts.apps.AccountsConfig',
     'dashboard.apps.DashboardConfig',
+    'universes.apps.UniversesConfig',
 ]
 
 MIDDLEWARE = [
