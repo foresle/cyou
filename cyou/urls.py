@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 # Customization admin site titles
 admin.site.site_header = 'cyou admin'
@@ -8,4 +8,5 @@ admin.site.index_title = 'cyou admin'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('dashboard.urls'))
 ]

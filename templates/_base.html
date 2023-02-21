@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_name|default:'cyou' }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'base/main.css' %}">
+</head>
+<body>
+    <header>
+        <div>- cyou -</div>
+        <div></div>
+        <div>
+            <a href="">login</a>
+            /
+            <a href="">register</a>
+        </div>
+    </header>
+    <div id="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>
