@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <div class="account_action">
+        <form method="post" action="{% url 'account_logout' %}">{% csrf_token %}
+            <div>Are you sure you want to sign out?</div>
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+            <div><button type="submit">Sign Out</button></div>
+        </form>
+    </div>
+{% endblock %}

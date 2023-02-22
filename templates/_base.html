@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="{% static 'base/main.css' %}">
+    <link rel="stylesheet" href="{% static 'base/forms.css' %}">
 
     <link rel="stylesheet" href="{% static 'universes/card.css' %}">
 </head>
@@ -15,11 +16,19 @@
     <header>
         <div>- cyou -</div>
         <div></div>
-        <div>
-            <a href="">login</a>
-            /
-            <a href="">register</a>
-        </div>
+        {% if user.is_authenticated %}
+            <div>
+                <a href="#">{{ user.email }}</a>
+                /
+                <a href="{% url 'account_logout' %}">logout</a>
+            </div>
+        {% else %}
+            <div>
+                <a href="{% url 'account_login' %}">login</a>
+                /
+                <a href="{% url 'account_signup' %}">signup</a>
+            </div>
+        {% endif %}
     </header>
     <div id="content">
         {% block content %}
