@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <div class="universe_detail">
+        <div>
+            <img src="{{ universes.img.url|default:'https://cataas.com/cat' }}" alt="{{ universe.name }}">
+            <div>
+                <div>{{ universe.name }}</div>
+                <div>{{ universe.author }} - {{ universe.created_at }}</div>
+                <div>{{ universe.description }}</div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <ul>
+                    {% for post in object.post_set.all %}
+                        <li><a href="">{{ post.name }}</a></li>
+                    {% empty %}
+                        <li>No posts found.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>Nothing...</div>
+        </div>
+    </div>
+{% endblock %}

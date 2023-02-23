@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.db.models import Prefetch
+from django.views.generic import DetailView
 
-# Create your views here.
+from .models import Universe, Post
+
+
+class UniverseDetailView(DetailView):
+    model = Universe
+    queryset = Universe.objects.prefetch_related('post_set')

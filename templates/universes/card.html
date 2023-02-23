@@ -1,8 +1,8 @@
 <div class="universe_card">
     <img src="{{ universe.img.url|default:'https://cataas.com/cat' }}" alt="{{ universe.name }}">
     <div>
-        <div>{{ universe.name }}</div>
+        <div><a href="{% url 'universes:detail' pk=universe.pk %}">{{ universe.name }}</a></div>
         <div>{{ universe.author }}</div>
     </div>
-    <div>{{ universe.description }}</div>
+    <div>{{ universe.description|truncatechars:120 }}</div>
 </div>

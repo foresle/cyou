@@ -1,0 +1,61 @@
+.universe_detail
+  width: 100%
+
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+
+  > div
+    border: #ffde7a 2px solid
+    margin: 10px
+    padding: 10px
+
+    > *
+      margin: 10px
+
+  > div:first-child
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+    > img:first-child
+      width: 100%
+      border: #ffde7a 2px solid
+
+    > div:last-child
+      > div:first-child
+        font-size: 1.6rem
+
+      > div:first-child, > div:nth-child(2)
+        margin: 0 0 20px 0
+
+  > div:last-child
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+
+    > div:last-child
+      font-size: 1.4rem
+
+    > div:first-child
+      > ul
+        margin: 0
+
+        > li
+          margin: 0 0 10px 0
+
+        > li:last-child
+          margin: 0
+
+@media screen and (min-width: 768px)
+  .universe_detail
+    > div:last-child, > div:first-child
+      flex-wrap: nowrap
+
+    > div:first-child
+      > img:first-child
+        width: 300px
+
+    > div:last-child
+      > div:first-child
+        width: 310px

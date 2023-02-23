@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="{% static 'base/forms.css' %}">
 
     <link rel="stylesheet" href="{% static 'universes/card.css' %}">
+    <link rel="stylesheet" href="{% static 'universes/detail.css' %}">
 </head>
 <body>
     <header>
-        <div>- cyou -</div>
+        <div>- <a href="{% url 'dashboard' %}">cyou</a> -</div>
         <div></div>
         {% if user.is_authenticated %}
             <div>
