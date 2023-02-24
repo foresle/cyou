@@ -6,6 +6,9 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: #171717;
+  background-image: radial-gradient(#ffde7a 5%, #171717 5%);
+  background-position: 0 0;
+  background-size: 25px 25px;
 }
 body * {
   color: #ffde7a;
@@ -14,7 +17,8 @@ body * {
   user-select: none;
 }
 body header {
-  border: #ffde7a 2px dashed;
+  border: #ffde7a 2px solid;
+  background-color: #171717;
   width: auto;
   margin: 20px;
   padding: 20px;
@@ -30,7 +34,8 @@ body header > div:first-child {
 }
 
 #content {
-  border: #ffde7a 2px dashed;
+  background-color: #171717;
+  border: #ffde7a 2px solid;
   width: auto;
   padding: 10px;
   margin: 0 20px 20px;
